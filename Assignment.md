@@ -61,7 +61,7 @@ total = df %>% group_by (date) %>% summarise (total = sum(steps,na.rm =T))
 hist(total$total, xlab="No of steps", ylab="Day", main="Histogram of the total number of steps taken each day")
 ```
 
-![](Figs/unnamed-chunk-2-1.png)<!-- -->
+![plot](Rplot01.png)
 
 
 ```r
@@ -94,7 +94,7 @@ ts_interval = df %>% group_by (interval) %>% summarise (avg = mean(steps,na.rm =
 with(ts_interval, plot(interval, avg, type = "l"))
 ```
 
-![](Figs/unnamed-chunk-5-1.png)<!-- -->
+![plot](Rplot02.png)
 
 ```r
 ts_interval = as.data.frame(ts_interval)
@@ -173,7 +173,7 @@ total
 hist(total$total, xlab="No of steps", ylab="Day", main="Histogram of the total number of steps taken each day")
 ```
 
-![](Figs/unnamed-chunk-10-1.png)<!-- -->
+![plot](Rplot03.png)
 
 
 ```r
@@ -243,4 +243,4 @@ with(ts, xyplot(total ~ interval | Indicator,
             ylab = "Average Number of Steps"))
 ```
 
-![](Figs/unnamed-chunk-14-1.png)<!-- -->
+![plot](Rplot04.png)
